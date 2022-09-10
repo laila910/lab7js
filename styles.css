@@ -1,15 +1,4 @@
-div{
- width: 50%;
- margin: auto;
- padding-top: 50px;
- padding-bottom: 50px;
- font-family: 'Open Sans Condensed', sans-serif;
- font-size: 24px;
- text-align: center;
- box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-#Clock{
- background-color: #66ffff;
+/* div{
  width: 50%;
  margin: auto;
  padding-top: 50px;
@@ -28,4 +17,77 @@ div{
  font-size: 24px;
  text-align: center;
  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+} */
+* {
+	box-sizing: border-box;
 }
+
+html {
+    padding-top:50px;
+}
+#main-container{
+    background-color: #66ffff;
+    width: 50%;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   }
+body {
+  
+ 
+    padding: 40px;
+    width: 60%;
+    height: 400px;
+    margin: 0 auto;
+
+}
+
+
+
+h2 {
+	text-align:center;
+}
+
+#alarm-container {
+    background-color: #66ffff;
+    width: 50%;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+label {
+	display:inline-block;
+}
+
+
+
+
+#setButton {
+    float:left;
+    background-color:lightgreen;
+    margin-top:10px;
+    padding:10px;
+    border:1px solid black;
+    border-radius: 50%;
+
+}
+#clearButton {
+    float:right;
+    background-color:red;
+    margin-top:10px;
+    padding: 10px;
+    border:1px solid black;
+    border-radius: 50%;
+}
+
+
+
