@@ -1,3 +1,4 @@
+var alarmTime='';
 var currentTime = setInterval(function(){
 	var date = new Date();
 	var hours = date.getHours();
@@ -21,6 +22,10 @@ if(seconds <10){
     seconds=seconds;
 }
 
+
+if(hours==00){
+    hours=12;
+}
 	document.getElementById('clock').textContent = hours + ":" + minutes + ":" + seconds + " " + ampm;
 	
 },1000);
@@ -41,8 +46,9 @@ function alarmSet() {
     var selectedSec = sec.options[sec.selectedIndex].value;
     var selectedAP = ap.options[ap.selectedIndex].value;
     
+    
 
-    var alarmTime = selectedHour + ":" + selectedMin + ":" + selectedSec + selectedAP;
+     alarmTime = selectedHour + ":" + selectedMin + ":" + selectedSec + selectedAP;
     console.log('alarmTime:' + alarmTime);
 
     document.getElementById('alarmhrs').disabled = true;
@@ -86,8 +92,8 @@ setInterval(function(){
 	var currentTime = document.getElementById('clock').textContent = hours+ ":" + minutes + ":" + seconds+ "" + ampm;
 	
 console.log(currentTime);
-	if (alarmTime == currentTime) {
-		alert('wake up,alarm'.alarmTime);
+	if (alarmTime ==currentTime) {
+		alert('wake up,alarm');
 		}
 
 },1000);
@@ -107,3 +113,26 @@ function alarmClear() {
 	sound.pause();
 }
 
+var slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides(n) {
+         showSlides(slideIndex += n);
+}
+function currentSlide(n) {
+         showSlides(slideIndex = n);
+}
+ function showSlides(n) {
+         var i;
+         var slides = document.getElementsByClassName("mySlides");
+         var dots = document.getElementsByClassName("dot");
+         if (n > slides.length) {slideIndex = 1}
+         if (n < 1) {slideIndex = slides.length}
+         for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+         }
+         for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+         }
+         slides[slideIndex-1].style.display = "block";
+         dots[slideIndex-1].className += " active";
+}
